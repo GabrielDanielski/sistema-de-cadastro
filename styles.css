@@ -1,0 +1,170 @@
+:root { /*Variável CSS: Colocamos cores nas variaveis para todo o código */
+    --branco-principal: #FFFFFF; 
+    --cinza-secundario: #C0C0C0;
+    --Botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;   
+    --fonte-principal: 'Inter';
+}
+
+body {
+    background-color: var(--cor-de-fundo); /*Assim que se usa varíável */
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    background-image: url(img/Background.png); /*Colocar imagem de fundo, meramente ilustrativa. 
+    Quando a imagem tem conteúdo, coloa-se no HTML */
+
+    background-repeat: no-repeat; /*Não repete a imagem, aparece apenas uma vez. Sem isso a imagem 
+    iria aparecer varias vezes no body */
+
+    background-size: contain; /*Preenche todo o container (Section) */
+
+    align-items: center; /*Alinhar Itens, quando está no grid, ele alinha no centro da coluna */
+    text-align: center; /*Alinha todo o texto, contando com a imagem */
+}
+
+
+.container {
+    height: 100vh; /*vh e vw são view port, ou seja, medidas: vh é view height. Está dizendo que
+    ocupa 100% do dispositivo que estamos usando. Ele calcula a tela */
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+.container__botao {
+    background-color: var(--Botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none; /*Tirar o sublinhado dos links/textos */
+    margin-bottom: 1em;
+}
+
+.container__botao:hover {
+    background-color: var(--branco-principal);
+    color: var(--Botao-azul);
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+/* CSS Segunda/terceira Section da Página */
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    display: inline-block; /*Transformou em linha, ocupa só o seu espaço (Inline) / Faz quebra de linha (Block */
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 1.7em;
+}
+
+/*Css Flex-Box Dispositivos favoritos */
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    font-size: 3em;
+    color: var(--branco-principal);
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none; /*Quando se cria uma lista, ele coloca ponto ou asterisco no final. Colocando
+    "none", nós tiramos esse ponto */
+    margin: 5em 0;
+}
+
+.lista__item {
+    font-size: 2em;
+    color: var(--branco-principal);
+}
+
+/*CSS do Footer */
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em; /* Compacta o Rodapé */
+}
+
+.rodape__lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    margin: 1em;
+}
+
+.link__pagina {
+    color: var(--branco-principal);
+    text-decoration: none;
+    font-size: 1em;
+    margin-left: 1em;
+}
+
+.link__pagina:hover {
+    color: var(--Botao-azul); /*Quando passar o Mouse em cima, muda de cor */
+}
+
+.link__pagina:active {
+    color: purple; /*Quando clicar com o mouse, muda de cor */
+}
+
+.rodape__texto {
+    color: var(--cinza-secundario);
+    font-size: 14px;
+    margin: 1em 0;
+}
